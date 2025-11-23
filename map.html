@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Multiply every element by 10: </p>
+    <p id="prod value"></p>
+    <script>
+        var numbers = [10,4,5,6];
+        function Myfunction(num){
+            return num *10;
+        }
+        var newarray = numbers.map(Myfunction);
+        document.getElementById("prod value").innerHTML = newarray;
+
+    </script>
+</body>
+</html>

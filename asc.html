@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick = "ascendString()"> Ascending order for string </button>
+    <button onclick="descendString()"> Desceding order for string </button>
+    <button onclick="ascendNumber()"> Ascending order for number </button>
+    <button onclick="descendNumber()"> Descending order for number </button>
+<p id = "str"></p>
+<p id="num"></p>
+<script>
+    var students = ["Pranshi", "Antra", "Siri", "Parikaa"]
+    var marks = [86,78,77,60]
+    document.getElementById("str").innerHTML=students;
+    document.getElementById("num").innerHTML=marks;
+    function ascendString(){
+        students.sort()
+        document.getElementById("str").innerHTML=students;
+    }
+   function descendString() {
+        students.reverse()
+        document.getElementById("str").innerHTML = students;
+    }
+    function ascendNumber() {
+        marks.sort(function(a,b){return a-b})
+        document.getElementById("num").innerHTML = marks;
+    }
+        function descendNumber() {
+            marks.sort(function (a, b) { return b-a })
+            document.getElementById("num").innerHTML = marks;
+        }
+
+</script>
+
+
+</body>
+</html>
