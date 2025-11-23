@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Mapping and Sorting Project</title>
+</head>
+
+<body>
+
+    <h1>Array Mapping and Sorting</h1>
+    <div class="box">
+        <h2>Results</h2>
+        <p><strong>Original Array:</strong> <span id="original"></span></p>
+        <p><strong>Mapped Array (×5):</strong> <span id="mapped"></span></p>
+        <p><strong>Ascending Order:</strong> <span id="asc"></span></p>
+        <p><strong>Descending Order:</strong> <span id="desc"></span></p>
+    </div>
+
+    <script>
+        let arr = [4, 8, 2, 9, 1];
+
+        let mappedArr = arr.map(num => num * 5);
+
+        let ascendingArr = [...mappedArr].sort((a, b) => a - b);
+        let descendingArr = [...mappedArr].sort((a, b) => b - a);
+
+        document.getElementById("original").textContent = arr.join(", ");
+        document.getElementById("mapped").textContent = mappedArr.join(", ");
+        document.getElementById("asc").textContent = ascendingArr.join(", ");
+        document.getElementById("desc").textContent = descendingArr.join(", ");
+    </script>
+
+</body>
+
+</html>
